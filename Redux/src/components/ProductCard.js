@@ -1,8 +1,11 @@
 import "./ProductCard.css";
-import { add, remove } from "../store/cartSlice";
+import { add } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
 export const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
+  const [set , notset ] = useState(false);
+  
   const { name, price, image } = product;
 
   return (
